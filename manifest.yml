@@ -1,0 +1,12 @@
+---
+applications:
+- name: db-integ
+  host: db-integ-aae
+  instances: 1
+  memory: 512M
+  path: build/libs/demo-0.0.1.jar
+  buildpack: java_buildpack
+  services:
+  - rds-csdb
+  env:
+    JBP_CONFIG_DEBUG: '{enabled: true}'
